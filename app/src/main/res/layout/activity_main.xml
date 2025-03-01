@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#2E3E9D"
+    >
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="GESTOR DE CONTRASEÑAS"
+       android:gravity="center"
+       android:textColor="@color/white"
+       android:textStyle="bold"
+       android:layout_marginTop="15dp"
+       android:textSize="25sp"
+       android:layout_marginBottom="20dp"
+       />
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:cardCornerRadius="20dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+         <GridLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:columnCount="2"
+             android:rowCount="1"
+             android:background="@color/white">
+
+            <LinearLayout android:layout_column="0"
+                android:layout_row="0" android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_margin="20dp"
+                >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="CREDENCIALES"
+                   android:textColor="#2E3E9D"
+                   android:textStyle="bold"
+                   android:textSize="25sp"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Id (Automatico)"
+                   android:textColorHint="#2E3E9D"
+                   android:alpha="0.5"
+                   />
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Ingrese usuario o correo"
+                   android:textColorHint="#2E3E9D"
+                   android:alpha="0.5"
+                   />
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Ingrese Proveedor"
+                   android:textColorHint="#2E3E9D"
+                   android:alpha="0.5"
+                   />
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Ingrese Contraseña"
+                   android:textColorHint="#2E3E9D"
+                   android:alpha="0.5"
+                   />
+
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_column="1"
+                android:layout_row="0" android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                >
+
+               <com.google.android.material.floatingactionbutton.FloatingActionButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/add"
+                   android:layout_marginBottom="5dp"
+                   android:backgroundTint="#FF5593"/>
+
+               <com.google.android.material.floatingactionbutton.FloatingActionButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@android:drawable/ic_menu_edit"
+                   android:layout_marginBottom="5dp"
+                   android:backgroundTint="#FF5593"
+                   />
+
+               <com.google.android.material.floatingactionbutton.FloatingActionButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@android:drawable/ic_menu_delete"
+                   android:backgroundTint="#FF5593"
+                   />
+
+
+            </LinearLayout>
+
+         </GridLayout>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="LISTA DE CREDENCIALES"
+             android:textColor="#2E3E9D"
+             android:textStyle="bold"
+             android:textSize="25sp"
+             android:layout_marginStart="20dp"
+             android:layout_marginBottom="20dp"/>
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             app:cardCornerRadius="20dp"
+             android:backgroundTint="#2E3E9D">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:orientation="vertical">
+
+               <ListView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:cacheColorHint="@color/white"
+                   />
+
+            </LinearLayout>
+
+
+
+         </androidx.cardview.widget.CardView>
+
+      </LinearLayout>
+
+
+
+
+   </androidx.cardview.widget.CardView>
+
+</LinearLayout>
